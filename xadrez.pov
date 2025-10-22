@@ -6,8 +6,8 @@
 
 // Câmera (Ajustada para enquadrar a mesa, que é mais alta)
 camera {
-  location <-15, 30, -45> // Mais afastada e ligeiramente mais alta
-  look_at <0, 0, 0>
+  location <-15, 30, -120> // Mais afastada e ligeiramente mais alta
+  look_at <0, -10, 0>
   angle 30
 }
 
@@ -74,7 +74,7 @@ light_source {
 #declare Bishop_Body_Radius_Bottom = 0.7; 
 #declare Bishop_Body_Radius_Top = 0.2; 
 #declare Bishop_Neck_Height = 0.3; 
-#declare Bishop_Head_Radius = 0.6; 
+#declare Bishop_Head_Radius = 0.4; 
 #declare Bishop_Slot_Width = 0.2; 
 #declare Bishop_Slot_Depth = 0.6; 
 #declare Bishop_Slot_Height = 0.8;
@@ -95,7 +95,7 @@ light_source {
 #declare Queen_Body_Bottom_Radius = .7; 
 #declare Queen_Body_Top_Radius = 0.3; 
 #declare Queen_Neck_Radius = 0.4; 
-#declare Queen_Head_Radius = 0.7; 
+#declare Queen_Head_Radius = 0.5; 
 #declare Crown_Spike_Radius = 0.15; 
 #declare Crown_Spike_Height = 0.4;
 #declare Queen_Geo = object { union { cylinder { <0, 0, 0>, <0, 0.5, 0>, Queen_Base_Radius } 
@@ -122,7 +122,7 @@ light_source {
 #declare King_Body_Middle_Radius = 0.3; 
 #declare King_Body_Top_Radius = 0.5; 
 #declare King_Neck_Radius = 0.6; 
-#declare King_Head_Radius = 0.8; 
+#declare King_Head_Radius = 0.6; 
 #declare Cross_Arm_Length = 0.8; 
 #declare Cross_Arm_Thickness = 0.2;
 #declare King_Geo = object { union { cylinder { <0, 0, 0>, <0, 0.5, 0>, King_Base_Radius } 
@@ -182,7 +182,8 @@ light_source {
                                            } 
                                      } texture { TableWood } 
                              };
-
+                                             
+box{ <-10, -20, -2> <10, 2, 2> }
 
 // =========================================================
 // CENA: MESA, TABULEIRO E PEÇAS
